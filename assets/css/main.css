@@ -12,13 +12,15 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Roboto",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Roboto", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
@@ -29,7 +31,12 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.55);  /* The default color of the main navmenu links */
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  ); /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -154,7 +161,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 90px;
+
   margin-right: 8px;
 }
 
@@ -206,12 +214,12 @@ h6 {
     position: relative;
   }
 
-  .navmenu>ul>li {
+  .navmenu > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu>ul>li:last-child {
+  .navmenu > ul > li:last-child {
     padding-right: 0;
   }
 
@@ -239,7 +247,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
+  .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
     height: 2px;
@@ -252,13 +260,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
+  .navmenu li:hover > a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -298,11 +306,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -314,7 +322,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -416,7 +424,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -443,7 +451,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -454,7 +462,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: url("../img/footerimg.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   position: relative;
@@ -477,11 +485,11 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 100px;
   margin-right: 6px;
 }
 
@@ -567,7 +575,8 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -672,7 +681,11 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 40%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 40%
+  );
   position: absolute;
   inset: 0;
 }
@@ -694,11 +707,11 @@ h6 {
   font-weight: 500;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -718,7 +731,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 76px;
@@ -782,8 +794,7 @@ section,
   padding: 140px 0 60px 0;
 }
 
-@media (max-width: 768px),
-(max-height: 480px) {
+@media (max-width: 768px), (max-height: 480px) {
   .hero .info {
     padding: 100px 50px 60px 50px;
   }
@@ -792,7 +803,7 @@ section,
 .hero .info h2 {
   margin-bottom: 30px;
   padding-bottom: 30px;
-  font-size: 56px;
+  font-size: 38px;
   font-weight: 700;
   position: relative;
 }
@@ -867,7 +878,11 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 30%
+  );
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -978,31 +993,35 @@ section,
   margin-bottom: 20px;
 }
 
-.get-started .php-email-form input[type=text],
-.get-started .php-email-form input[type=email],
+.get-started .php-email-form input[type="text"],
+.get-started .php-email-form input[type="email"],
 .get-started .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 20%
+  );
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.get-started .php-email-form input[type=text]:focus,
-.get-started .php-email-form input[type=email]:focus,
+.get-started .php-email-form input[type="text"]:focus,
+.get-started .php-email-form input[type="email"]:focus,
 .get-started .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.get-started .php-email-form input[type=text]::placeholder,
-.get-started .php-email-form input[type=email]::placeholder,
+.get-started .php-email-form input[type="text"]::placeholder,
+.get-started .php-email-form input[type="email"]::placeholder,
 .get-started .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.get-started .php-email-form button[type=submit] {
+.get-started .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1011,7 +1030,7 @@ section,
   border-radius: 4px;
 }
 
-.get-started .php-email-form button[type=submit]:hover {
+.get-started .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -1102,7 +1121,8 @@ section,
   font-size: 22px;
   position: relative;
   display: inline-block;
-  border-bottom: 4px solid color-mix(in srgb, var(--heading-color), transparent 90%);
+  border-bottom: 4px solid
+    color-mix(in srgb, var(--heading-color), transparent 90%);
   transition: 0.3s;
 }
 
@@ -1236,7 +1256,8 @@ section,
   cursor: pointer;
   height: 100%;
   border: 0;
-  border-bottom: 4px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 4px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .features .nav-link i {
@@ -1917,7 +1938,8 @@ section,
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-left: 3px solid
+    color-mix(in srgb, var(--default-color), transparent 70%);
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
@@ -2006,7 +2028,6 @@ section,
 }
 
 @media (max-width: 575px) {
-
   .project-details .swiper-button-prev,
   .project-details .swiper-button-next {
     display: none;
@@ -2343,7 +2364,7 @@ section,
   margin: 0;
 }
 
-.blog-details .meta-top ul li+li {
+.blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2363,7 +2384,8 @@ section,
 
 .blog-details .meta-bottom {
   padding-top: 10px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .blog-details .meta-bottom i {
@@ -2402,7 +2424,7 @@ section,
   display: inline-block;
 }
 
-.blog-details .meta-bottom .tags li+li::before {
+.blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--default-color);
   content: ",";
@@ -2466,6 +2488,35 @@ section,
 
 .blog-comments .comments-count {
   font-weight: bold;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 60px; /* Adjust distance from bottom */
+  right: 10px; /* Adjust distance from right */
+  z-index: 1000; /* Ensure it stays above other elements */
+  font-size: 40px; /* Adjust icon size */
+  background-color: #25d366; /* WhatsApp green */
+  color: white; /* Icon color */
+  padding: 10px;
+  border-radius: 50%; /* Circular icon */
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More shadow on hover */
+}
+
+.whatsapp-icon a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
 }
 
 .blog-comments .comment {
@@ -2647,8 +2698,8 @@ section,
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -2659,19 +2710,19 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -2680,7 +2731,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -2725,7 +2776,7 @@ section,
   transition: 0.3s;
 }
 
-.search-widget form input[type=text] {
+.search-widget form input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
@@ -2734,7 +2785,7 @@ section,
   color: var(--default-color);
 }
 
-.search-widget form input[type=text]:focus {
+.search-widget form input[type="text"]:focus {
   outline: none;
 }
 
