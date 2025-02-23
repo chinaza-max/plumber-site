@@ -196,4 +196,37 @@
       window.location.href = "https://wa.me/2348184724615";
     }
   };
+
+  class SinglePhraseTyping {
+    constructor(element, phrase, delay = 100) {
+      this.element = element;
+      this.phrase = phrase;
+      this.delay = delay;
+      this.currentIndex = 0;
+    }
+
+    type() {
+      if (this.currentIndex < this.phrase.length) {
+        this.element.innerHTML += this.phrase.charAt(this.currentIndex);
+        this.currentIndex++;
+        setTimeout(() => {
+          this.type();
+          window.scrollTo({
+            top: 0, // Scroll to the top
+            behavior: "smooth", // Smooth scrolling
+          });
+        }, this.delay);
+      }
+    }
+
+    start() {
+      this.type();
+    }
+  }
+
+  const element = document.getElementById("myheadingText");
+  const phrase = "Welcome to Sir Obitexch Plumbing and Building Mechanicals!";
+
+  const typing = new SinglePhraseTyping(element, phrase);
+  typing.start();
 })();
