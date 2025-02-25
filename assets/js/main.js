@@ -225,7 +225,8 @@
   }
 
   const element = document.getElementById("myheadingText");
-  const phrase = "Welcome to Sir Obitexch Plumbing and Building Mechanicals!";
+  const phrase =
+    "Welcome to Sir Obitexch Plumbing and Building Mechanicals!    .....your comfort is our joy";
 
   const typing = new SinglePhraseTyping(element, phrase);
   typing.start();
